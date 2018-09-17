@@ -1,0 +1,62 @@
+﻿@model AdminPaneNew.Areas.OfficialAdmin.Models.SingleFee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/OfficialAdmin/Views/Shared/Layout.cshtml";
+}
+
+@section Pagename {
+
+    Single Fee
+
+}
+<div>
+    <h3>Details</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.studentid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.studentid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Billno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Billno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receivedby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receivedby)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sfid }, new { @class = "btn btn-danger" }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-danger" })
+</p>
