@@ -90,7 +90,7 @@ namespace AdminPaneNew.Areas.OfficialAdmin.Controllers
                 fee.balance = fee.Package - fee.pay;
                 db.Entry(fee).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "StudentRegs");
             }
            // return View(singleFee);
             return RedirectToAction("Index", "StudentRegs");
@@ -141,7 +141,8 @@ namespace AdminPaneNew.Areas.OfficialAdmin.Controllers
                 singleFee.Receivedby = Session["user"].ToString();
                 db.Entry(singleFee).State = EntityState.Modified;
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Index", "StudentRegs");
             }
            // return View(singleFee);
             return RedirectToAction("Index", "StudentRegs");
@@ -181,8 +182,8 @@ namespace AdminPaneNew.Areas.OfficialAdmin.Controllers
             fee.balance = fee.Package - fee.pay;
             db.Entry(fee).State = EntityState.Modified;
             db.SaveChanges();
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "StudentRegs");
+            //return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
